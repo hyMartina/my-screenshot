@@ -7,12 +7,12 @@ Day 2 must-run extra command in terminal(for the placement part):
 // Before running floorplan, has to run all the command ran in the launcher yesterday  
 //Then, run the below:
 
-run\_floorplan  
+'run_floorplan'  
 ***![][image1]***  
 /’To calculate the die area in microns, can open the file under step3 (For the reason, I think it is because the floorplan isn’t totally shown, but the die area information should be shown after running floorplan. Just right, step three says “Running Initial Floorplanning”, I consider it as, “if you run this file, you can see what should be here while running floorplanning”)  
 ‘/
 
-cat  designs/ci/picorv32a/runs/RUN\_2025.07.18\_02.47.52/logs/floorplan/3-initial\_fp.log  
+'cat  designs/ci/picorv32a/runs/RUN\_2025.07.18\_02.47.52/logs/floorplan/3-initial\_fp.log'  
 ![][image2]  
 /’ You can find this after doing the command.  
 die width \= 542.325, die height \= 553.045  
@@ -26,7 +26,7 @@ die area \= 543.325 \* 553.045 \= 300483.175
 //when in ‘runs’, you can ‘ls’ to see all the RUN, and I always use the most recent one
 
 //Time to load floorplan def\!  
-magic \-T /home/beaver/Desktop/work/tools/openlane\_working\_dir/pdks/sky130A//libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read picorv32.def &
+'magic \-T /home/beaver/Desktop/work/tools/openlane\_working\_dir/pdks/sky130A//libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read picorv32.def &'
 
 ![][image3]
 
@@ -42,11 +42,11 @@ To get information of a certain part: Select ( Hover your mouse above the part a
 
 ***Placement***  
 //Should be ran after run\_floorplan  
-run\_placement  
+'run_placement'  
 ![][image6]
 
 //To load placement def in magic  
-magic \-T ../pdks/sky130A/libs.tech/magic/sky130A.tech lef read designs/ci/picorv32a/runs/RUN\_2025.07.17\_18.18.01/tmp/merged.nom.lef def read designs/ci/picorv32a/runs/RUN\_2025.07.17\_18.18.01/results/placement/picorv32.def &  
+'magic \-T ../pdks/sky130A/libs.tech/magic/sky130A.tech lef read designs/ci/picorv32a/runs/RUN\_2025.07.17\_18.18.01/tmp/merged.nom.lef def read designs/ci/picorv32a/runs/RUN\_2025.07.17\_18.18.01/results/placement/picorv32.def &'  
 // \!\!\!Should go to the right directory before running the command: /home/beaver/Desktop/work/tools/openlane\_working\_dir/openlane  
 ![][image7]
 
